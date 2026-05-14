@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contato | ADEPT Corretora de Seguros</title>
+<meta name="description" content="Entre em contato com a ADEPT Corretora de Seguros. Orçamento sem compromisso!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;transition:all .4s}
+.site-header.scrolled{background:rgba(10,10,10,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,130,12,.1)}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;color:#fff}
+.logo svg{width:22px;height:22px;color:#E8820C}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:.9rem;color:#A0A0A0;transition:color .3s;font-weight:400}
+.nav-links a:hover,.nav-links a.active{color:#E8820C}
+.btn-cta{display:inline-block;padding:12px 28px;background:#E8820C;color:#fff;font-weight:600;font-size:.85rem;border-radius:50px;letter-spacing:.5px;transition:all .3s;border:none;cursor:pointer;text-transform:uppercase}
+.btn-cta:hover{background:#d4740a;transform:translateY(-2px);box-shadow:0 8px 25px rgba(232,130,12,.3)}
+
+/* HERO CONTACT */
+.contact-hero{padding:160px 5vw 80px;text-align:center;position:relative;overflow:hidden}
+.contact-hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(circle,rgba(232,130,12,.08),transparent 60%);pointer-events:none}
+.contact-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:1px;position:relative;z-index:1}
+.contact-hero h1 span{color:#E8820C}
+.contact-hero p{color:#A0A0A0;font-size:1.1rem;margin-top:12px;font-weight:300;position:relative;z-index:1}
+
+/* MAIN GRID */
+.contact-grid{max-width:1100px;margin:0 auto;padding:0 5vw 80px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+
+/* FORM */
+.contact-form-card{background:rgba(15,15,18,.6);border:1px solid rgba(255,255,255,.06);border-radius:28px;padding:40px 36px;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.contact-form-card::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 20% 10%,rgba(232,130,12,.06),transparent 60%);pointer-events:none;border-radius:inherit}
+.contact-form-card h2{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:8px;position:relative;z-index:1}
+.contact-form-card .form-sub{color:#A0A0A0;font-size:.9rem;margin-bottom:28px;font-weight:300;position:relative;z-index:1}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0;position:relative;z-index:1}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;position:relative;z-index:1}
+.form-group label{font-size:.75rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+.form-group input,.form-group textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;color:#fff;font-family:'Inter',sans-serif;font-size:.9rem;transition:all .3s;outline:none;resize:vertical;box-sizing:border-box}
+.form-group input:focus,.form-group textarea:focus{border-color:rgba(232,130,12,.4);background:rgba(232,130,12,.04);box-shadow:0 0 0 3px rgba(232,130,12,.08)}
+.form-group textarea{min-height:120px}
+.form-actions{display:flex;align-items:center;gap:16px;margin-top:8px;position:relative;z-index:1}
+.form-actions .btn-cta{padding:14px 36px;font-size:.9rem}
+
+/* WHATSAPP SIDE */
+.contact-side{display:flex;flex-direction:column;gap:24px}
+.wa-card{background:rgba(15,15,18,.6);border:1px solid rgba(37,211,102,.15);border-radius:28px;padding:36px 32px;text-align:center;position:relative;overflow:hidden}
+.wa-card::before{content:'';position:absolute;top:0;left:0;right:0;height:200px;background:radial-gradient(circle at 50% 0%,rgba(37,211,102,.08),transparent 60%);pointer-events:none}
+.wa-icon{width:72px;height:72px;margin:0 auto 20px;position:relative;z-index:1}
+.wa-icon svg{width:72px;height:72px;fill:#25D366;filter:drop-shadow(0 0 20px rgba(37,211,102,.3))}
+.wa-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:8px;position:relative;z-index:1}
+.wa-card p{color:#A0A0A0;font-size:.9rem;line-height:1.6;font-weight:300;margin-bottom:20px;position:relative;z-index:1}
+.btn-wa{display:inline-block;padding:14px 32px;background:#25D366;color:#fff;font-weight:600;font-size:.85rem;border-radius:50px;letter-spacing:.5px;transition:all .3s;text-transform:uppercase}
+.btn-wa:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.25)}
+.wa-phone{color:rgba(255,255,255,.5);font-size:.85rem;margin-top:14px;position:relative;z-index:1}
+
+/* INFO CARDS */
+.info-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto;padding:0 5vw 80px}
+.info-card{background:rgba(15,15,18,.5);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:32px 24px;text-align:center;transition:all .4s}
+.info-card:hover{border-color:rgba(232,130,12,.25);transform:translateY(-4px)}
+.info-card-icon{width:48px;height:48px;border-radius:14px;background:rgba(232,130,12,.08);border:1px solid rgba(232,130,12,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#E8820C}
+.info-card-icon svg{width:22px;height:22px}
+.info-card h4{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1px;margin-bottom:8px}
+.info-card p{color:#A0A0A0;font-size:.85rem;line-height:1.6;font-weight:300}
+.info-card a{color:#E8820C;font-weight:500;font-size:.85rem}
+.btn-outline{display:inline-block;margin-top:12px;padding:10px 24px;border:1px solid rgba(232,130,12,.4);color:#E8820C;border-radius:50px;font-size:.8rem;font-weight:500;transition:all .3s}
+.btn-outline:hover{background:rgba(232,130,12,.1);transform:translateY(-2px)}
+
+/* CTA */
+.final-cta{position:relative;text-align:center;padding:100px 5vw;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(232,130,12,.08),transparent 60%);pointer-events:none}
+.final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3rem);color:#E8820C;margin-bottom:12px;position:relative;z-index:1}
+.final-cta p{font-size:1.1rem;font-weight:600;margin-bottom:32px;position:relative;z-index:1}
+.final-cta .btn-cta{position:relative;z-index:1;animation:pulse-btn 2s infinite}
+@keyframes pulse-btn{0%,100%{box-shadow:0 0 0 0 rgba(232,130,12,.4)}70%{box-shadow:0 0 0 15px rgba(232,130,12,0)}}
+
+/* FOOTER */
+.site-footer{border-top:1px solid rgba(232,130,12,.15);padding:50px 5vw;background:#0a0a0a}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:40px;align-items:start}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:12px}
+.footer-nav{display:flex;flex-direction:column;gap:8px}
+.footer-nav a{color:#A0A0A0;font-size:.9rem;transition:color .3s}
+.footer-nav a:hover{color:#E8820C}
+.footer-contact h4{color:#fff;font-size:1rem;margin-bottom:12px;font-weight:600}
+.footer-contact p,.footer-contact a{color:#A0A0A0;font-size:.85rem;line-height:1.8}
+.footer-contact a:hover{color:#E8820C}
+.footer-social{display:flex;gap:16px;margin-top:16px}
+.footer-social a{width:40px;height:40px;border-radius:50%;background:rgba(232,130,12,.1);border:1px solid rgba(232,130,12,.25);display:flex;align-items:center;justify-content:center;color:#E8820C;transition:all .3s}
+.footer-social a:hover{background:#E8820C;color:#fff;transform:translateY(-2px)}
+.footer-social a svg{width:18px;height:18px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+.contact-grid{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
+.info-cards{grid-template-columns:1fr}
+.footer-inner{grid-template-columns:1fr;text-align:center}
+.footer-social{justify-content:center}
+.nav-links{display:none}
+.btn-cta.header-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header scrolled">
+  <a href="landing.html" class="logo">
+    <img src="images/logo-adept.png" alt="ADEPT Corretora de Seguros" style="height:48px;width:auto">
+  </a>
+  <nav class="nav-links">
+    <a href="landing.html">ADEPT</a>
+    <a href="contato.html" class="active">Contato</a>
+  </nav>
+  <a href="https://wa.me/552230562186" target="_blank" class="btn-cta header-cta">QUERO MEU SEGURO</a>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <h1 class="reveal">Ainda não tem <span>seguro</span>?</h1>
+  <p class="reveal">Entre em contato para um orçamento sem compromisso!</p>
+</section>
+
+<!-- FORM + WHATSAPP -->
+<div class="contact-grid">
+  <div class="contact-form-card reveal">
+    <h2>Envie sua mensagem</h2>
+    <p class="form-sub">Retornamos em até 24 horas.</p>
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(22) 99999-9999" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Conte-nos suas necessidades..."></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-cta">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="contact-side">
+    <div class="wa-card reveal">
+      <div class="wa-icon">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <h3>Prefere falar pelo WhatsApp?</h3>
+      <p>Caso prefira falar diretamente pelo WhatsApp, estamos sempre à disposição!</p>
+      <a href="https://wa.me/552230562186" target="_blank" class="btn-wa">Quero falar por WhatsApp!</a>
+      <p class="wa-phone">(22) 99837-7787</p>
+    </div>
+  </div>
+</div>
+
+<!-- INFO CARDS -->
+<div class="info-cards">
+  <div class="info-card reveal">
+    <div class="info-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    </div>
+    <h4>Ligue para nós</h4>
+    <p>Conte-nos suas necessidades e enviaremos um orçamento sem compromisso.</p>
+    <a href="tel:+552230562186">(22) 3056-2186</a>
+  </div>
+  <div class="info-card reveal">
+    <div class="info-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    </div>
+    <h4>Manda um WhatsApp!</h4>
+    <p>Caso prefira falar diretamente pelo WhatsApp, estamos sempre à disposição!</p>
+    <a href="https://wa.me/552230562186" target="_blank">(22) 99837-7787</a>
+  </div>
+  <div class="info-card reveal">
+    <div class="info-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <h4>Visite-nos</h4>
+    <p>Rua Pinhalão, 33 Parque Santo Amaro<br>Campos dos Goytacazes - RJ<br>28030-135</p>
+    <a href="https://maps.google.com/?q=Rua+Pinhalão+33+Campos+dos+Goytacazes" target="_blank" class="btn-outline">Veja no mapa</a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="final-cta">
+  <h2>Já passou da hora de você ter o seu seguro!</h2>
+  <p>Conte com a ADEPT para o que você precisar!</p>
+  <a href="https://wa.me/552230562186" target="_blank" class="btn-cta">Quero meu seguro!</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><img src="images/logo-adept.png" alt="ADEPT" style="height:60px;width:auto"></div>
+      <p style="color:#A0A0A0;font-size:.85rem;font-weight:300">Corretora de Seguros</p>
+      <div class="footer-nav" style="margin-top:16px">
+        <a href="landing.html">ADEPT</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4>Contato</h4>
+      <p><a href="tel:+552230562186">(22) 3056-2186</a></p>
+      <p><a href="tel:+5522998377787">(22) 99837-7787</a></p>
+      <p><a href="mailto:contato@adeptcorretora.com">contato@adeptcorretora.com</a></p>
+      <p style="margin-top:8px">Rua Pinhalão, n.° 33,<br>Campos dos Goytacazes,<br>Rio de Janeiro, 28030-135</p>
+    </div>
+    <div>
+      <div class="footer-social">
+        <a href="mailto:contato@adeptcorretora.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://wa.me/552230562186" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+})();
+
+// Form submit -> WhatsApp
+function handleSubmit(e){
+  e.preventDefault();
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const email = document.getElementById('email').value;
+  const msg = document.getElementById('mensagem').value;
+  const text = `Olá! Meu nome é ${nome}.%0ATelefone: ${telefone}%0AEmail: ${email}%0A%0A${msg}`;
+  window.open(`https://wa.me/552230562186?text=${text}`, '_blank');
+}
+</script>
+</body>
+</html>
